@@ -119,12 +119,19 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue, { PropType } from "vue";
+
+interface Point {
+  x: number;
+  y: number;
+}
 
 export default Vue.extend({
   name: "HelloWorld",
   props: {
-    msg: String
+    msg: String,
+    p1: Object as PropType<Point>,
+    p2: Object as PropType<Point>
   }
 });
 </script>
