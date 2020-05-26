@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <my-calendar />
     <v-row class="text-center">
       <v-col cols="12">
         <v-img
@@ -83,10 +84,13 @@
 
 <script lang="ts">
 import Vue from "vue";
+import MyCalendar from "@/components/MyCalendar.vue";
 
 export default Vue.extend({
   name: "HelloWorld",
-
+  components: {
+    MyCalendar: MyCalendar
+  },
   data: () => ({
     ecosystem: [
       {
